@@ -137,11 +137,11 @@
         var db = indexedDB.open("dummy_indexdb", 1); // iOS 14.6 fix; the call to open indexdb hangs forever otherwise
 
         const buildUrl = "Build";
-        const loaderUrl = buildUrl + "/Build_Zappar.loader.js";
+        const loaderUrl = buildUrl + "/bb0d9ecdb05db3e84da20bd14a4f84dc.loader.js";
         const config = {
-            dataUrl: buildUrl + "/Build_Zappar.data",
-            frameworkUrl: buildUrl + "/Build_Zappar.framework.js",
-            codeUrl: buildUrl + "/Build_Zappar.wasm",
+            dataUrl: buildUrl + "/9a54e983d285dfde0a25877f1165f173.data.br",
+            frameworkUrl: buildUrl + "/97648da39c8c7c1dd8f57f5c378537d6.framework.js.br",
+            codeUrl: buildUrl + "/39c2fb6febd7203ff90e65f3505d37a4.wasm.br",
             streamingAssetsUrl: "StreamingAssets",
             companyName: "DefaultCompany",
             productName: "ZapWorks_Test",
@@ -150,8 +150,8 @@
             cacheControl: function (url) {
             // typically includes: .data, .bundle, .zpt
             if (url.match(/\.data/) || url.match(/\.bundle/) || url.match(/\.zpt/)) {
-             return "must-revalidate";
-            }
+             return "immutable";
+}
    
             if (url.match(/\.mp4/) || url.match(/\.custom/) || url.match(/\.zbin/)) {
                 return "immutable";
